@@ -7,6 +7,7 @@ require('dotenv').config();
 
 var loginRouter = require('./routes/login');
 var patchRouter = require('./routes/patch');
+var resizeRouter = require('./routes/resize');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/login', loginRouter);
 app.use('/patch', patchRouter);
+app.use('/resize', resizeRouter);
 
 module.exports = app;
