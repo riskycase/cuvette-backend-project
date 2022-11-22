@@ -10,6 +10,7 @@ function verifyUser(req, res, next) {
       console.error(err);
     } else {
       console.log(decoded);
+      req.username = decoded.username;
       next();
     }
   });
