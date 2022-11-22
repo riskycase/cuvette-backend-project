@@ -22,7 +22,6 @@ router.post('/', verifyUser, function (req, res, next) {
       });
     })
     .catch(error => {
-      console.error(error);
       res.status(400).json({
         response: 'error',
         error,
